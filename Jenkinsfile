@@ -16,5 +16,15 @@ pipeline {
                 sh 'sudo systemctl status jenkins'
             }
         }
+        stage('3-Bolatito'){
+            steps{
+                sh'ps -ef'
+            }
+         }
+        stage('4-Bolatito'){
+            steps{
+                sh'sudo systemctl status Jenkins'
+            }
+        }
     }
 }
