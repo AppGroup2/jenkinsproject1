@@ -26,5 +26,15 @@ pipeline {
                 sh'sudo systemctl status Jenkins'
             }
         }
+        stage('5-Afeez'){
+            steps{
+                sh'sudo systemctl status Jenkins'
+            }
+        }
+        stage('6-Afeez'){
+            steps{
+                sh'ps -ef'
+            }
+        }
     }
 }
