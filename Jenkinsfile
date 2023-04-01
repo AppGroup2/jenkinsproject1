@@ -76,5 +76,11 @@ pipeline {
                 sh 'ps -ef'
             }
         }
+       stage('15-Yomi2'){
+            steps{
+                echo "This is Yomi testing he can now contribute to this project"
+                sh 'whoami'
+            }
+        } 
     }
 }
