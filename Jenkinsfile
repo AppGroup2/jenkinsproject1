@@ -23,17 +23,17 @@ pipeline {
          }
         stage('4-Bolatito'){
             steps{
-                sh'sudo systemctl status Jenkins'
+                sh'sudo systemctl status jenkins'
             }
         }
         stage('5-Afeez'){
             steps{
-                sh'sudo systemctl status Jenkins'
+                sh 'sudo systemctl status jenkins'
             }
         }
         stage('6-Afeez'){
             steps{
-                sh'ps -ef'
+                sh 'ps -ef'
             }
         }
     }
