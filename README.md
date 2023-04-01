@@ -1,2 +1,68 @@
 # jenkinsproject1
 Jenkins group level project 1
+-	What is a Jenkins plugins? 
+-	Ans: Jenkins plugins are extensions that can be installed into a Jenkins server to provide additional functionality. These plugins are written in Java and can be installed from the Jenkins dashboard.
+-	Name 5 Jenkins plugins and their use cases 
+-	Ans: 
+-	Git Plugin - Integrates Jenkins with Git version control system and allows Jenkins to pull code from Git repositories.
+-	Pipeline Plugin - Enables the creation of pipelines using a domain-specific language called Jenkinsfile.
+-	Docker Plugin - Provides integration with Docker, allowing Jenkins to build, test, and deploy Docker containers.
+-	JUnit Plugin - Allows Jenkins to report and display JUnit test results for projects.
+-	Email Extension Plugin - Allows Jenkins to send emails with customizable templates, and supports attaching build artifacts, logs, and test results.
+-	What is the differences between scripted pipeline and declarative pipeline? 
+-	Ans: The main differences between scripted pipeline and declarative pipeline in Jenkins are the syntax and the level of control.
+-	Scripted pipelines use a more flexible Groovy-based scripting syntax, which allows developers to define custom logic and have more control over the pipeline. Declarative pipelines, on the other hand, use a structured syntax and aim to provide a simpler and more concise way of defining pipelines.
+-	Use generic syntax to demo scripted and declarative pipeline as code - 	What is a stage-level variable and how is it different from top-level variables? 
+-	Ans: 
+-	Scripted Pipeline:
+-	node {
+-	   stage('Build') {
+-	      sh 'mvn clean package'
+-	   }
+-	   stage('Test') {
+-	      sh 'mvn test'
+-	   }
+-	   stage('Deploy') {
+-	      sh 'scp target/myapp.war user@remote:/var/lib/tomcat/webapps'
+-	   }
+-	}
+-	Declarative Pipeline:
+-	pipeline {
+-	   agent any
+-	   stages {
+-	      stage('Build') {
+-	         steps {
+-	            sh 'mvn clean package'
+-	         }
+-	      }
+-	      stage('Test') {
+-	         steps {
+-	            sh 'mvn test'
+-	         }
+-	      }
+-	      stage('Deploy') {
+-	         steps {
+-	            sh 'scp target/myapp.war user@remote:/var/lib/tomcat/webapps'
+-	         }
+-	      }
+-	   }
+-	}
+-	What is a stage-level variable and how is it different from top-level variables?
+-	A stage-level variable is a variable that is defined within a specific stage of a Jenkins pipeline and is only available within that stage. Top-level variables, on the other hand, are defined outside of the stages and can be accessed throughout the entire pipeline. 
+-	What information does Jenkins need to integrate with github platform? 
+-	Ans: To integrate Jenkins with GitHub, Jenkins needs to be configured with the following information:
+-	GitHub URL - The URL of the GitHub repository that contains the project.
+-	Credentials - The credentials that Jenkins will use to access the repository.
+-	Webhook - A webhook needs to be configured in the GitHub repository to notify Jenkins of changes.
+-	How do you inject script into your pipeline? 
+-	Ans: To inject a script into a Jenkins pipeline, you can use the `sh` command in a Jenkinsfile to execute a script.
+-	What are the similarities between a dependency and a plugin? 
+-	Ans: Both dependencies and plugins are external components that provide additional functionality to an application. However, dependencies are typically used by the application at runtime, while plugins are used by the development environment to build, test, and deploy the application.
+-	How do you configure service account credentials for Jenkins? 
+-	Ans: 
+-	To configure service account credentials for Jenkins, you can follow these steps:
+-	Go to Jenkins dashboard and click on "Credentials" from the left-hand menu.
+-	Click on "System" from the sub-menu and then "Global credentials".
+-	Click on "Add Credentials" and select the appropriate credential type.
+-	Fill in the required information, including the service account username and password.
+-	Click "OK" to save the credentials.
