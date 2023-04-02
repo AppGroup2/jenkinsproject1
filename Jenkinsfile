@@ -19,11 +19,16 @@ pipeline {
         stage('3-Bolatito'){
             steps{
                 sh'ps -ef'
+                echo "checking system resources"
+                sh 'whoami'
             }
          }
         stage('4-Bolatito'){
             steps{
                 sh'sudo systemctl status jenkins'
+                sh 'free -m'
+                sh 'free -g'
+                sh 'df -h'
             }
         }
         stage('5-Afeez'){
